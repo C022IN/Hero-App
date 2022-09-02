@@ -8,7 +8,7 @@ describe('empty spec', () => {
   })
   /*it('requires email', () => {
     cy.get('#mui-1').click().wait(10000)
-    cy.contains('Email is required')
+      .should('contain', 'Email is required')
   })
   it('requires password', () => {
     cy.get('#mui-1').type('platformowner@heroapp.com').click()
@@ -19,8 +19,22 @@ describe('empty spec', () => {
   })
   */
   it('has forgot password', () => {
-    cy.contains('Forgot Password?')
-    
+    cy.contains('Forgot Password?').click()
+    cy.url().should('include', '/account/forgotPassword')
+    cy.go('back')
+    cy.reload()
+  })
+  it('has Terms of Service', () => {
+    cy.contains('Terms of Service').click()
+    cy.url().should('include', '/')
+    cy.go('back')
+    cy.reload()
+  })
+  it('has Terms of Service', () => {
+    cy.contains('Privacy Policy').click()
+    cy.url().should('include', '/')
+    cy.go('back')
+    cy.reload()
   })
   
   it('requires a valid username and password', () => {
@@ -30,19 +44,7 @@ describe('empty spec', () => {
   })
   
   it('logs in successfully', () => {
-    cy.contains('Dashboard')
-  })
-  it('go to Menu', () => {
-    cy.get('[data-testid="MenuIcon"]').click()
-  })
-  it('go to dashboard', () => {
-    cy.get('.css-1ulc0kq > :nth-child(1) > .MuiButtonBase-root').click()
-  })
-  it('go to dashboard', () => {
-    
-  })
-  it('go to dashboard', () => {
-    
+    cy.contains('Dashboard').should('exist')
   })
   
 })
