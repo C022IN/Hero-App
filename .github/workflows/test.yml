@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - intergrate
  jobs:
   cypress-run:
     runs-on:  ubuntu-latest
