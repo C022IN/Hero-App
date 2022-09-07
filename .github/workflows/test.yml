@@ -5,7 +5,7 @@ on:
     branches:
       - main
       - intergrate/*
- jobs:
+jobs:
   cypress-run:
     runs-on:  ubuntu-latest
     steps: 
