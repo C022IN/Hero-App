@@ -1,2 +1,2 @@
 # Hero-App
-#Cypress E2E Tests
+Cypress E2E Tests
