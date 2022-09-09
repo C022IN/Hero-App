@@ -7,7 +7,7 @@ on:
       - intergrate/*
 jobs:
   cypress-run:
-    runs-on:  ubuntu-latest
+    runs-on:  macos-10.15
     steps: 
       - name: Checkout
         uses: actions/checkout@v2.4.2
