@@ -6,7 +6,7 @@ on:
       - main
 jobs:
   cypress-run:
-    runs-on:  macos-10.15
+    runs-on:  ubuntu-latest
     steps: 
       - name: Checkout
         uses: actions/checkout@v2.4.2
@@ -15,5 +15,4 @@ jobs:
           # uses: cypress-io/github-action@30008f1458a5a2c97054bfe118fe33d75976c482
         uses: cypress-io/github-action@v4.2.0
         with:
-          build: npm run build
-          start: npm start
+          browser: chrome
