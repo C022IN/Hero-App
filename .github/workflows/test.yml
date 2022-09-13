@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - intergrate
 jobs:
   cypress-run:
     runs-on:  macos-10.15
